@@ -1,451 +1,461 @@
-/* ===== KLEURENSCHEMA ===== */
 :root {
-    --primary-black: #000000;
-    --primary-magenta: #E100DA;
-    --primary-cyan: #01D1DB;
-    --text-dark: #1a1a1a;
-    --text-light: #ffffff;
-    --bg-light: #f8f9fa;
-    --bg-gradient: linear-gradient(135deg, var(--primary-magenta), var(--primary-cyan));
+  --primary-black: #000000;
+  --primary-magenta: #e100da;
+  --primary-cyan: #01d1db;
+  --text-dark: #1a1a1a;
+  --text-light: #ffffff;
+  --bg-light: #f8f9fa;
+  --bg-gradient: linear-gradient(
+    135deg,
+    var(--primary-magenta),
+    var(--primary-cyan)
+  );
 }
 
-/* ===== GENERAL ===== */
 body {
-    font-family: 'Arial', sans-serif;
-    color: var(--text-dark);
+  font-family: "Arial", sans-serif;
+  color: var(--text-dark);
 }
 
 span {
-  color: #E100DA;
+  color: #e100da;
 }
 
-/* ===== HEADER ===== */
 header {
-    background-color: var(--primary-black);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-black);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header .nav-link {
-    color: var(--text-light);
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease;
-    position: relative;
+  color: var(--text-light);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 header .nav-link:hover {
-    color: var(--primary-cyan);
-    transform: translateY(-2px);
+  color: var(--primary-cyan);
+  transform: translateY(-2px);
 }
 
 header .nav-link.active {
-    color: var(--primary-magenta);
+  color: var(--primary-magenta);
 }
 
 header .nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 1rem;
-    right: 1rem;
-    height: 2px;
-    background: var(--bg-gradient);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background: var(--bg-gradient);
 }
 
-/* Hamburger menu button */
 header .btn-outline-secondary {
-    color: var(--text-light);
-    border-color: var(--primary-cyan);
-    font-size: 1.5rem;
-    padding: 0.25rem 0.75rem;
+  color: var(--text-light);
+  border-color: var(--primary-cyan);
+  font-size: 1.5rem;
+  padding: 0.25rem 0.75rem;
 }
 
 header .btn-outline-secondary:hover {
-    background-color: var(--primary-cyan);
-    border-color: var(--primary-cyan);
-    color: var(--primary-black);
+  background-color: var(--primary-cyan);
+  border-color: var(--primary-cyan);
+  color: var(--primary-black);
 }
 
-/* Mobile menu */
 #mobileMenu .nav-link {
-    color: var(--text-light);
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #mobileMenu .nav-link:hover {
-    color: var(--primary-cyan);
-    padding-left: 1rem;
+  color: var(--primary-cyan);
+  padding-left: 1rem;
 }
 
-/* ===== MAIN CONTENT ===== */
 main h1 {
-    color: var(--primary-black);
-    font-weight: bold;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+  color: var(--primary-black);
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 main h1::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 60%;
-    height: 4px;
-    background: var(--bg-gradient);
-    border-radius: 2px;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background: var(--bg-gradient);
+  border-radius: 2px;
 }
 
 main p {
-    line-height: 1.8;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
 }
 
-/* Profile image styling */
 main img.rounded-circle {
-    border: 4px solid transparent;
-    background: var(--bg-gradient);
-    background-clip: padding-box;
-    box-shadow: 0 4px 15px rgba(225, 0, 218, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 4px solid transparent;
+  background: var(--bg-gradient);
+  background-clip: padding-box;
+  box-shadow: 0 4px 15px rgba(225, 0, 218, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 main img.rounded-circle:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 25px rgba(1, 209, 219, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(1, 209, 219, 0.4);
 }
 
-/* Buttons */
 .btn-primary {
-    background: var(--bg-gradient);
-    border: none;
-    color: var(--text-light);
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
+  background: var(--bg-gradient);
+  border: none;
+  color: var(--text-light);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--primary-cyan), var(--primary-magenta));
-    transition: left 0.3s ease;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--primary-cyan),
+    var(--primary-magenta)
+  );
+  transition: left 0.3s ease;
+  z-index: -1;
 }
 
 .btn-primary:hover::before {
-    left: 0;
+  left: 0;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(225, 0, 218, 0.4);
-    color: var(--text-light);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(225, 0, 218, 0.4);
+  color: var(--text-light);
 }
 
-/* ===== FOOTER ===== */
 footer {
-    background-color: var(--primary-black) !important;
-    color: var(--text-light);
-    border-top: 3px solid transparent;
-    border-image: var(--bg-gradient) 1;
+  background-color: var(--primary-black) !important;
+  color: var(--text-light);
+  border-top: 3px solid transparent;
+  border-image: var(--bg-gradient) 1;
 }
 
 footer.bg-light {
-    background-color: var(--primary-black) !important;
+  background-color: var(--primary-black) !important;
 }
 
 footer .social-links a {
-    color: var(--text-light);
-    transition: all 0.3s ease;
-    display: inline-block;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 footer .social-links a:hover {
-    color: var(--primary-cyan);
-    transform: translateY(-3px) scale(1.1);
+  color: var(--primary-cyan);
+  transform: translateY(-3px) scale(1.1);
 }
 
 footer .social-links a:nth-child(2):hover {
-    color: var(--primary-magenta);
+  color: var(--primary-magenta);
 }
 
 footer .text-muted {
-    color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: 768px) {
-    main h1 {
-        font-size: 2rem;
-    }
-    
-    main h1::after {
-        width: 80%;
-    }
+  main h1 {
+    font-size: 2rem;
+  }
+
+  main h1::after {
+    width: 80%;
+  }
 }
 
-/* ===== SCROLLBAR STYLING (optional) ===== */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg-light);
+  background: var(--bg-light);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--bg-gradient);
-    border-radius: 5px;
+  background: var(--bg-gradient);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, var(--primary-cyan), var(--primary-magenta));
+  background: linear-gradient(
+    135deg,
+    var(--primary-cyan),
+    var(--primary-magenta)
+  );
 }
 
-/* ===== PORTFOLIO CARDS ===== */
-.portfolio-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.portfolio-kaart {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(225, 0, 218, 0.3);
+.portfolio-kaart:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(225, 0, 218, 0.3);
 }
 
 .portfolio-image {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 16/10;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
 }
 
 .portfolio-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.portfolio-card:hover .portfolio-image img {
-    transform: scale(1.1);
+.portfolio-kaart:hover .portfolio-image img {
+  transform: scale(1.1);
 }
 
 .portfolio-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--bg-gradient);
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-gradient);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
 }
 
-.portfolio-card:hover .portfolio-overlay {
-    opacity: 0.9;
+.portfolio-kaart:hover .portfolio-overlay {
+  opacity: 0.9;
 }
 
 .view-project {
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .portfolio-info {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 .portfolio-info h3 {
-    color: var(--primary-black);
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+  color: var(--primary-black);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .portfolio-info p {
-    margin-bottom: 0;
-    font-size: 0.95rem;
+  margin-bottom: 0;
+  font-size: 0.95rem;
 }
 
-.portfolio-card a {
-    color: inherit;
+.portfolio-kaart a {
+  color: inherit;
 }
 
-.portfolio-card a:hover {
-    color: inherit;
+.portfolio-kaart a:hover {
+  color: inherit;
 }
 
-/* Contact page specific styles */
 .contact-form .form-control,
 .contact-form .form-label {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 
 .contact-form .form-control:focus {
-    border-color: var(--primary-cyan);
-    box-shadow: 0 0 0 0.2rem rgba(1, 209, 219, 0.25);
+  border-color: var(--primary-cyan);
+  box-shadow: 0 0 0 0.2rem rgba(1, 209, 219, 0.25);
 }
 
 .contact-info h3 {
-    color: var(--primary-black);
-    font-weight: 600;
+  color: var(--primary-black);
+  font-weight: 600;
 }
 
 .contact-info h5 {
-    color: var(--primary-black);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+  color: var(--primary-black);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .contact-icon {
-    color: var(--primary-magenta);
+  color: var(--primary-magenta);
 }
 
 .contact-info a {
-    color: var(--primary-cyan);
-    transition: color 0.3s ease;
+  color: var(--primary-cyan);
+  transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: var(--primary-magenta);
+  color: var(--primary-magenta);
 }
 
 .social-links-contact a {
-    color: var(--text-dark);
-    transition: all 0.3s ease;
-    display: inline-block;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .social-links-contact a:hover {
-    color: var(--primary-cyan);
-    transform: translateY(-3px) scale(1.1);
+  color: var(--primary-cyan);
+  transform: translateY(-3px) scale(1.1);
 }
 
 .social-links-contact a:nth-child(2):hover {
-    color: var(--primary-magenta);
+  color: var(--primary-magenta);
 }
 
-/* ===== PROJECT DETAIL PAGE ===== */
 .btn-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-dark);
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-back:hover {
-    color: var(--primary-cyan);
-    transform: translateX(-5px);
+  color: var(--primary-cyan);
+  transform: translateX(-5px);
 }
 
 .project-main-image {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .project-main-image img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .project-section h2 {
-    color: var(--primary-black);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid transparent;
-    border-image: var(--bg-gradient) 1;
-    display: inline-block;
+  color: var(--primary-black);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid transparent;
+  border-image: var(--bg-gradient) 1;
+  display: inline-block;
 }
 
 .detail-item {
-    background: var(--bg-light);
-    padding: 1rem;
-    border-radius: 8px;
-    border-left: 3px solid var(--primary-cyan);
+  background: var(--bg-light);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-cyan);
 }
 
 .detail-item h5 {
-    color: var(--primary-magenta);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+  color: var(--primary-magenta);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .detail-item p {
-    margin-bottom: 0;
-    color: var(--text-dark);
+  margin-bottom: 0;
+  color: var(--text-dark);
 }
 
 #gallery img {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(225, 0, 218, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(225, 0, 218, 0.3);
 }
 
 .project-nav h5,
 .project-info h5 {
-    color: var(--primary-black);
-    font-weight: 600;
-    margin-bottom: 1rem;
+  color: var(--primary-black);
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .btn-outline-primary {
-    border-color: var(--primary-cyan);
-    color: var(--primary-cyan);
+  border-color: var(--primary-cyan);
+  color: var(--primary-cyan);
 }
 
 .btn-outline-primary:hover {
-    background-color: var(--primary-cyan);
-    border-color: var(--primary-cyan);
-    color: white;
+  background-color: var(--primary-cyan);
+  border-color: var(--primary-cyan);
+  color: white;
 }
 
 .btn-outline-secondary {
-    border-color: var(--text-dark);
-    color: var(--text-dark);
+  border-color: var(--text-dark);
+  color: var(--text-dark);
 }
 
 .btn-outline-secondary:hover {
-    background-color: var(--text-dark);
-    border-color: var(--text-dark);
-    color: white;
+  background-color: var(--text-dark);
+  border-color: var(--text-dark);
+  color: white;
 }
 
 .project-nav .btn,
 .project-info .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.profielfoto {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.project-nav-fixed {
+  top: 20px;
 }
