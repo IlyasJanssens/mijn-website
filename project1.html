@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1 - Ilyas Janssens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="mx-auto grid max-w-6xl grid-cols-1 gap-6 bg-gray-50 px-4 py-6 text-gray-900 lg:grid-cols-3">
+
+  <a href="#inhoud" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Ga naar de inhoud</a>
+
+  <header class="flex flex-wrap items-center justify-between gap-2 rounded-lg bg-black px-4 py-3 text-white lg:col-span-3">
+    <a href="index.html" class="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"><img src="images/logo.webp" alt="Ilyas Janssens" width="150" height="60" class="w-16"></a>
+
+    <input type="checkbox" id="menu-knop" class="peer sr-only">
+    <label for="menu-knop" class="cursor-pointer rounded-lg border border-gray-300 px-3 py-2 peer-focus-visible:outline-2 md:hidden">Menu</label>
+
+    <nav aria-label="Hoofdmenu" class="hidden w-full peer-checked:block md:block md:w-auto">
+      <ul class="flex flex-col md:flex-row md:gap-2">
+        <li><a href="index.html" class="block rounded-lg px-3 py-2 text-white hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400">Home</a></li>
+        <li><a href="portfolio.html" class="block rounded-lg px-3 py-2 text-white hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400">Portfolio</a></li>
+        <li><a href="contact.html" class="block rounded-lg px-3 py-2 text-white hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="inhoud" class="flex flex-col gap-6 lg:col-span-2">
+    <section class="flex flex-col gap-2">
+      <p class="text-sm font-semibold uppercase tracking-widest text-pink-700">Project 1</p>
+      <h1 class="text-3xl font-semibold tracking-tight">Slimme woning in Python</h1>
+      <p class="text-lg text-gray-600">In dit project werd er een simulatie gemaakt van een slimme woning.</p>
+    </section>
+
+    <img src="images/Python.webp" alt="Hoofdafbeelding van het project" width="1200" height="800" class="aspect-video w-full rounded-lg object-cover">
+
+    <section class="flex flex-col gap-2">
+      <h2 class="text-xl font-semibold">Beschrijving</h2>
+      <p class="leading-relaxed text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iusto commodi architecto libero quis repellendus voluptatum sequi numquam et unde odit perspiciatis voluptate ducimus, repellat sapiente provident eligendi laborum maxime.</p>
+    </section>
+
+    <section class="flex flex-col gap-3">
+      <h2 class="text-xl font-semibold">Projectinfo</h2>
+      <ul class="grid grid-cols-2 gap-4">
+        <li class="flex flex-col"><span class="font-semibold">Duur</span><span class="text-gray-600">6 weken</span></li>
+        <li class="flex flex-col"><span class="font-semibold">Type</span><span class="text-gray-600">Schoolproject</span></li>
+        <li class="flex flex-col"><span class="font-semibold">Rol</span><span class="text-gray-600">Frontend Developer</span></li>
+        <li class="flex flex-col"><span class="font-semibold">Technologieën</span><span class="text-gray-600">Python & HTML</span></li>
+      </ul>
+    </section>
+
+    <section class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <h2 class="col-span-2 text-xl font-semibold lg:col-span-4">Beelden</h2>
+      <img src="images/Python1.webp" alt="Beschrijving van beeld 1" width="1200" height="800" class="aspect-[4/3] w-full rounded-lg object-cover">
+      <img src="images/Python2.webp" alt="Beschrijving van beeld 2" width="1200" height="800" class="aspect-[4/3] w-full rounded-lg object-cover">
+      <img src="images/Python3.webp" alt="Beschrijving van beeld 3" width="1200" height="800" class="aspect-[4/3] w-full rounded-lg object-cover">
+      <img src="images/Python4.webp" alt="Beschrijving van beeld 4" width="1200" height="800" class="aspect-[4/3] w-full rounded-lg object-cover">
+    </section>
+
+    <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+      <li>
+        <a href="contact.html" class="flex items-center justify-center gap-2 rounded-lg bg-pink-700 px-4 py-2 text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Contacteer mij
+        </a>
+      </li>
+      <li>
+        <a href="portfolio.html" class="flex items-center justify-center gap-2 rounded-lg border border-pink-300 bg-white px-4 py-2 text-pink-900 hover:bg-pink-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-700">
+          Terug naar portfolio
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </li>
+    </ul>
+  </main>
+
+  <aside class="flex flex-col gap-6">
+    <section class="flex flex-col gap-2">
+      <h2 class="text-xl font-semibold">Andere projecten</h2>
+      <ul class="flex flex-col gap-2">
+        <li><a href="project2.html" class="block rounded-lg bg-pink-700 px-4 py-2 text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Netwerktopologie</a></li>
+        <li><a href="project3.html" class="block rounded-lg bg-pink-700 px-4 py-2 text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">King-of-the-hill</a></li>
+        <li><a href="project4.html" class="block rounded-lg bg-pink-700 px-4 py-2 text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Projectnaam 4</a></li>
+        <li><a href="project5.html" class="block rounded-lg bg-pink-700 px-4 py-2 text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Projectnaam 5</a></li>
+        <li><a href="project6.html" class="block rounded-lg bg-pink-700 px-4 py-2 text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Projectnaam 6</a></li>
+      </ul>
+    </section>
+  </aside>
+
+  <footer class="rounded-lg bg-black px-4 py-4 text-center text-sm text-white lg:col-span-3">
+    <p>&copy; 2026 Ilyas Janssens</p>
+  </footer>
+</body>
+</html>
