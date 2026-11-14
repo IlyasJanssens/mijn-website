@@ -1,204 +1,99 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-    <!-- Bootstrap CSS icons: https://icons.getbootstrap.com/#usage -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-    <!-- JavaScript: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
-    <!-- eigen geschreven css voor jouw html-bestand -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Ilyas Janssens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="mx-auto grid max-w-6xl grid-cols-1 gap-6 bg-gray-50 px-4 py-6 text-gray-900 lg:grid-cols-3">
 
-  <body class="d-flex flex-column min-vh-100">
-    <header class="py-3 border-bottom">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-6 col-md-3">
-            <a href="index.html" class="d-flex align-items-center text-decoration-none">
-              <img src="assets/images/Logo.webp" alt="Logo" height="70" />
-            </a>
-          </div>
+  <a href="#inhoud" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Ga naar de inhoud</a>
 
-          <nav class="col-md-9 d-none d-md-block">
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="portfolio.html">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </nav>
+  <header class="flex flex-wrap items-center justify-between gap-2 rounded-lg bg-black px-4 py-3 text-white lg:col-span-3">
+    <a href="index.html" class="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"><img src="images/logo.webp" alt="Ilyas Janssens, naar de startpagina" width="150" height="60" class="w-16"></a>
 
-          <div class="col-6 d-md-none text-end">
-            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-expanded="false" aria-controls="mobileMenu">
-              <span class="navbar-toggler-icon">☰</span>
-            </button>
-          </div>
-        </div>
+    <input type="checkbox" id="menu-knop" class="peer sr-only">
+    <label for="menu-knop" class="cursor-pointer rounded-lg border border-gray-300 px-3 py-2 peer-focus-visible:outline-2 md:hidden">Menu</label>
 
-        <div class="collapse" id="mobileMenu">
-          <nav class="mt-3">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="portfolio.html">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <nav aria-label="Hoofdmenu" class="hidden w-full peer-checked:block md:block md:w-auto">
+      <ul class="flex flex-col md:flex-row md:gap-2">
+        <li><a href="index.html" class="block rounded-lg px-3 py-2 text-white hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400">Home</a></li>
+        <li><a href="portfolio.html" aria-current="page" class="block rounded-lg px-3 py-2 font-semibold text-cyan-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400">Portfolio</a></li>
+        <li><a href="contact.html" class="block rounded-lg px-3 py-2 text-white hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="container flex-grow-1 my-5">
-      <section>
-        <h1 class="mb-5 text-center">Mijn portfolio</h1>
+  <main id="inhoud" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
+    <h1 class="text-3xl font-semibold tracking-tight sm:col-span-2 lg:col-span-3">Mijn projecten</h1>
 
-        <div class="row g-4">
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="portfolio-kaart">
-              <a href="slimmewoning.html" class="text-decoration-none">
-                <div class="portfolio-image">
-                  <img src="assets/images/Python.webp" alt="Project 1" class="img-fluid"/>
-                  <div class="portfolio-overlay">
-                    <span class="view-project">Bekijk project</span>
-                  </div>
-                </div>
-                <div class="portfolio-info">
-                  <h3 class="h5 fw-semibold mb-2">Project 1</h3>
-                  <p class="text-muted">Slimme woning simulatie in Python</p>
-                </div>
-              </a>
-            </div>
-          </div>
+    <article class="flex flex-col items-start gap-3 rounded-lg border border-gray-200 bg-cyan-400 p-4">
+      <img src="images/Python.webp" alt="Screenshot van project 1" width="1200" height="800" class="aspect-video w-full rounded-lg object-cover">
+      <h2 class="font-semibold">Slimme woning in Python</h2>
+      <p class="flex-1 text-sm text-gray-600">Simulatie van een slimme woning gemaakt in Python.</p>
+      <a href="project1.html" class="rounded-lg bg-pink-700 px-3 py-2 text-sm text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Bekijk project</a>
+    </article>
+    <article class="flex flex-col items-start gap-3 rounded-lg border border-gray-200 bg-cyan-400 p-4">
+      <img src="images/PKT.webp" alt="Screenshot van project 2" width="1200" height="800" class="aspect-video w-full rounded-lg object-cover">
+      <h2 class="font-semibold">Netwerktopologie</h2>
+      <p class="flex-1 text-sm text-gray-600">Topologie waarin DHCP, VLAN's, trunking en meer geconfigueerd zijn.</p>
+      <a href="project2.html" class="rounded-lg bg-pink-700 px-3 py-2 text-sm text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Bekijk project</a>
+    </article>
+    <article class="flex flex-col items-start gap-3 rounded-lg border border-gray-200 bg-cyan-400 p-4">
+      <img src="images/HTML.webp" alt="Screenshot van project 3" width="1200" height="800" class="aspect-video w-full rounded-lg object-cover">
+      <h2 class="font-semibold">King-of-the-hill</h2>
+      <p class="flex-1 text-sm text-gray-600">Website om spelers in een King-of-the-hill formaat geld te laten winnen.</p>
+      <a href="project3.html" class="rounded-lg bg-pink-700 px-3 py-2 text-sm text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Bekijk project</a>
+    </article>
+    <article class="flex flex-col items-start gap-3 rounded-lg border border-gray-200 bg-cyan-400 p-4">
+      <img src="images/sfeerbeeld1.webp" alt="Screenshot van project 4" width="1200" height="800" class="aspect-video w-full rounded-lg object-cover">
+      <h2 class="font-semibold">Projectnaam 4</h2>
+      <p class="flex-1 text-sm text-gray-600">Korte beschrijving.</p>
+      <a href="project4.html" class="rounded-lg bg-pink-700 px-3 py-2 text-sm text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Bekijk project</a>
+    </article>
+    <article class="flex flex-col items-start gap-3 rounded-lg border border-gray-200 bg-cyan-400 p-4">
+      <img src="images/sfeerbeeld2.webp" alt="Screenshot van project 5" width="1200" height="800" class="aspect-video w-full rounded-lg object-cover">
+      <h2 class="font-semibold">Projectnaam 5</h2>
+      <p class="flex-1 text-sm text-gray-600">Korte beschrijving.</p>
+      <a href="project5.html" class="rounded-lg bg-pink-700 px-3 py-2 text-sm text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Bekijk project</a>
+    </article>
+    <article class="flex flex-col items-start gap-3 rounded-lg border border-gray-200 bg-cyan-400 p-4">
+      <img src="images/sfeerbeeld3.webp" alt="Screenshot van project 6" width="1200" height="800" class="aspect-video w-full rounded-lg object-cover">
+      <h2 class="font-semibold">Projectnaam 6</h2>
+      <p class="flex-1 text-sm text-gray-600">Korte beschrijving.</p>
+      <a href="project6.html" class="rounded-lg bg-pink-700 px-3 py-2 text-sm text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Bekijk project</a>
+    </article>
+  </main>
 
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="portfolio-kaart">
-              <a href="topdesign.html" class="text-decoration-none">
-                <div class="portfolio-image">
-                  <img src="assets/images/PKT.webp" alt="Project 2" class="img-fluid"/>
-                  <div class="portfolio-overlay">
-                    <span class="view-project">Bekijk project</span>
-                  </div>
-                </div>
-                <div class="portfolio-info">
-                  <h3 class="h5 fw-semibold mb-2">Project 2</h3>
-                  <p class="text-muted">Netwerk topologie in Cisco Packet Tracer</p>
-                </div>
-              </a>
-            </div>
-          </div>
+    <aside class="flex flex-col gap-4">
+    <h2 class="text-xl font-semibold">Recente reviews</h2>
+    <article class="flex flex-col gap-2 rounded-lg border border-gray-200 bg-cyan-400 p-4">
+      <h3 class="font-semibold">Slimme woning in Python</h3>
+      <p class="text-sm text-gray-600">“Goed gedaan. Realistische simulatie.”</p>
+      <p class="text-sm font-semibold">Kristof Michiels</p>
+      <a href="project1.html" class="text-sm text-pink-700 underline hover:text-pink-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Bekijk project</a>
+    </article>
+    <article class="flex flex-col gap-2 rounded-lg border border-gray-200 bg-cyan-400 p-4">
+      <h3 class="font-semibold">Netwerktopologie</h3>
+      <p class="text-sm text-gray-600">“Mooi gewerkt. Dit is een volledige configuratie van wat er gevraagd werd met nog extra.”</p>
+      <p class="text-sm font-semibold">Dimitri Waeyaert</p>
+      <a href="project2.html" class="text-sm text-pink-700 underline hover:text-pink-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Bekijk project</a>
+    </article>
+    <article class="flex flex-col gap-2 rounded-lg border border-gray-200 bg-cyan-400 p-4">
+      <h3 class="font-semibold">King-of-the-hill</h3>
+      <p class="text-sm text-gray-600">“Amazing work. The players involved loved it!”</p>
+      <p class="text-sm font-semibold">Ben Lacy</p>
+      <a href="project3.html" class="text-sm text-pink-700 underline hover:text-pink-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Bekijk project</a>
+    </article>
+  </aside>
 
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="portfolio-kaart">
-              <a href="kingofthehill.html" class="text-decoration-none">
-                <div class="portfolio-image">
-                  <img src="assets/images/HTML.webp" alt="Project 3" class="img-fluid"/>
-                  <div class="portfolio-overlay">
-                    <span class="view-project">Bekijk project</span>
-                  </div>
-                </div>
-                <div class="portfolio-info">
-                  <h3 class="h5 fw-semibold mb-2">Project 3</h3>
-                  <p class="text-muted">King-of-the-hill voor spelers in video games</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="portfolio-kaart">
-              <a href="project4.html" class="text-decoration-none">
-                <div class="portfolio-image">
-                  <img src="assets/images/Sfeerbeeld1.webp" alt="Project 4" class="img-fluid"/>
-                  <div class="portfolio-overlay">
-                    <span class="view-project">Bekijk project</span>
-                  </div>
-                </div>
-                <div class="portfolio-info">
-                  <h3 class="h5 fw-semibold mb-2">Project 4</h3>
-                  <p class="text-muted">Korte beschrijving van project 4</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="portfolio-kaart">
-              <a href="project5.html" class="text-decoration-none">
-                <div class="portfolio-image">
-                  <img src="assets/images/Sfeerbeeld2.webp" alt="Project 5" class="img-fluid"/>
-                  <div class="portfolio-overlay">
-                    <span class="view-project">Bekijk project</span>
-                  </div>
-                </div>
-                <div class="portfolio-info">
-                  <h3 class="h5 fw-semibold mb-2">Project 5</h3>
-                  <p class="text-muted">Korte beschrijving van project 5</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="portfolio-kaart">
-              <a href="project6.html" class="text-decoration-none">
-                <div class="portfolio-image">
-                  <img src="assets/images/Sfeerbeeld3.webp" alt="Project 6" class="img-fluid"/>
-                  <div class="portfolio-overlay">
-                    <span class="view-project">Bekijk project</span>
-                  </div>
-                </div>
-                <div class="portfolio-info">
-                  <h3 class="h5 fw-semibold mb-2">Project 6</h3>
-                  <p class="text-muted">Korte beschrijving van project 6</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="py-4 bg-light mt-auto">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <div class="social-links mb-3">
-              <a href="https://www.linkedin.com/in/ilyas-janssens-7664b838a" target="_blank" rel="noopener noreferrer" class="me-3" aria-label="LinkedIn">
-                <a href="https://www.linkedin.com/in/ilyas-janssens-7664b838a" target="_blank" rel="noopener noreferrer" class="me-3" aria-label="LinkedIn">
-                <i class="bi bi-linkedin fs-4"></i>
-              </a>
-              <a href="https://github.com/IlyasJanssens" target="_blank" rel="noopener noreferrer" class="me-3" aria-label="GitHub">
-                <i class="bi bi-github fs-4"></i>
-              </a>
-              <a href="https://x.com/PeaKymeister" target="_blank" rel="noopener noreferrer" class="me-3" aria-label="Twitter">
-                <i class="bi bi-twitter-x fs-4"></i>
-              </a>
-              </a>
-            </div>
-
-            <p class="mb-0 text-muted">&copy; 2025 Mijn Portfolio.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
+  <footer class="rounded-lg bg-black px-4 py-4 text-center text-sm text-white lg:col-span-3">
+    <p>&copy; 2026 Ilyas Janssens</p>
+  </footer>
+</body>
 </html>
