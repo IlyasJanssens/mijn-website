@@ -33,7 +33,7 @@
     <h1 class="mb-2 text-3xl font-semibold tracking-tight">Contact</h1>
     <p class="mb-6 text-gray-700">Velden met een <span class="font-semibold text-red-700">*</span> zijn verplicht.</p>
 
-    <form action="#" method="get" class="space-y-4">
+    <form name="contact" method="POST" data-netlify="true" class="space-y-4">
       <div>
         <label for="voornaam" class="block font-semibold">Voornaam <span class="text-red-700" aria-hidden="true">*</span></label>
         <input type="text" id="voornaam" name="voornaam" autocomplete="given-name" required class="mt-1 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
@@ -63,6 +63,7 @@
 
       <button type="submit" class="rounded-lg bg-pink-700 px-5 py-2 font-semibold text-white hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Verstuur</button>
     </form>
+    <p class="mt-4 text-sm text-gray-600">Ik gebruik je gegevens enkel om op je te antwoorden.</p>
   </main>
 
   <aside class="flex flex-col gap-4">
